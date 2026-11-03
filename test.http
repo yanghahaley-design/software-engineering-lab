@@ -1,0 +1,8 @@
+### 测试存款接口
+POST http://localhost:8081/api/account/deposit
+Content-Type: application/json
+
+{
+  "accountId": 1,
+  "amount": 100.00
+}
