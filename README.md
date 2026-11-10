@@ -43,6 +43,4 @@ cd backend/digital-bank
 
 ## 部署说明
 
-推送到 `master` 分支后，`.github/workflows/frontend-ci.yml` 会执行前端语法检查、静态演示数据测试，并在 Actions 中生成可直接下载的 `digital-bank-frontend` 构件。
-
-私有仓库首次启用 GitHub Pages 需要仓库管理员权限。管理员在仓库 **Settings → Pages** 中将发布源设置为 **GitHub Actions** 后，手动运行 `Deploy frontend to GitHub Pages` 工作流即可发布。
+推送到 `master` 分支后，`.github/workflows/deploy-pages.yml` 会把 `frontend` 目录发布为 GitHub Pages 站点。仓库的 Pages 发布源需要设置为 **GitHub Actions**。

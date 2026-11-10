@@ -1,6 +1,9 @@
 name: Deploy frontend to GitHub Pages
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
@@ -19,16 +22,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Test static demo
-        run: node --test tests/demo-api.test.mjs
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload static frontend
         uses: actions/upload-pages-artifact@v3
